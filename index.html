@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <style>
-      /* Set a fixed height for the map container */
-      #map {
-        height: 400px;
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
     <title>Gebetszeiten für Fotimajon</title>
   </head>
   <body>
     <h1>Gebetszeiten für Fotimajon</h1>
     <p>
-      Damit Deine Location gefunden werden kann, bitte auf "Fotimajons Location"
-      drücken
+      Damit ich Dein Standort finden kann, bitte ich auf "Standort von
+      Fotimajon" zu drücken
     </p>
 
-    <button onclick="getLocation()">Fotimajons Location</button>
+    <button onclick="getLocation()">Standort von Fotimajon</button>
 
     <div id="map"></div>
 
@@ -62,11 +57,11 @@
       // Funktion zum Anzeigen der Gebetszeiten
       function displayPrayerTimes(times) {
         let prayerTimesDiv = document.getElementById("prayerTimes");
-        let html = "<h2>Gebetszeiten</h2>";
+        let html = "<div><h2>Gebetszeiten</h2> </div>";
 
         // Iteriere durch die Gebetszeiten und füge sie dem HTML hinzu
         for (let time in times) {
-          html += `<p>${time}: ${times[time]}</p>`;
+          html += `<div class="prayerCard"><p>${time}</p><p>${times[time]}</p></div>`;
         }
 
         // Füge das generierte HTML zum div hinzu

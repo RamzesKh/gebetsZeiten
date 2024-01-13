@@ -42,7 +42,7 @@
         console.log(latitude, longitude);
 
         // API-Anfrage an "aladhan.com" für Gebetszeiten
-        let apiUrl = `https://api.aladhan.com/v1/timings?latitude=${latitude_x}&longitude=${longitude_y}&method=2`;
+        let apiUrl = `https://api.aladhan.com/v1/timings?latitude=${latitude_x}&longitude=${longitude_y}&method=3`;
 
         fetch(apiUrl)
           .then((response) => response.json())
